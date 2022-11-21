@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Sum extends TwoVariableOperation implements Function {
+public class Sum extends TwoVariableOperation {
 
     public Sum(Function function1, Function function2) {
         super(function1, function2);

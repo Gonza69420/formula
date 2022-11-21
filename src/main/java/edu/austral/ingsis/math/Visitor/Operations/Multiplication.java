@@ -6,7 +6,7 @@ import edu.austral.ingsis.math.Visitor.Visitor;
 
 import java.util.List;
 
-public class Multiplication extends TwoVariableOperation implements Visitable {
+public class Multiplication extends TwoVariableOperation {
 
 
     public Multiplication(Visitable visitable1, Visitable visitable2) {

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Multiplication extends TwoVariableOperation implements Function{
+public class Multiplication extends TwoVariableOperation{
 
 
     public Multiplication(Function function1, Function function2) {

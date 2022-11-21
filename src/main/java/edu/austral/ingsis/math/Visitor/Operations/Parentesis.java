@@ -4,7 +4,7 @@ import edu.austral.ingsis.math.Visitor.Variable;
 import edu.austral.ingsis.math.Visitor.Visitable;
 import edu.austral.ingsis.math.Visitor.Visitor;
 
-public class Parentesis extends SingleVariableOperation implements Visitable {
+public class Parentesis extends SingleVariableOperation{
 
 
     public Parentesis(Visitable variable) {

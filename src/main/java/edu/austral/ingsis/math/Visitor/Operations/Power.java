@@ -6,7 +6,7 @@ import edu.austral.ingsis.math.Visitor.Visitor;
 
 import java.util.List;
 
-public class Power extends TwoVariableOperation implements Visitable {
+public class Power extends TwoVariableOperation{
 
     public Power(Visitable visitable1, Visitable visitable2) {
         super(visitable1, visitable2);

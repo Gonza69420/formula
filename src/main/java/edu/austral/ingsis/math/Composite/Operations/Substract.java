@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Substract extends TwoVariableOperation implements Function {
+public class Substract extends TwoVariableOperation {
 
 
     public Substract(Function function1, Function function2) {

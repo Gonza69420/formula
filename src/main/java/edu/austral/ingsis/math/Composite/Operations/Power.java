@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Power extends TwoVariableOperation implements Function{
+public class Power extends TwoVariableOperation {
 
     public Power(Function function1, Function function2) {
         super(function1, function2);

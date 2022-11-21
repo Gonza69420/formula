@@ -2,7 +2,7 @@ package edu.austral.ingsis.math.Visitor.Operations;
 
 import edu.austral.ingsis.math.Visitor.Visitable;
 
-public class TwoVariableOperation {
+public abstract class TwoVariableOperation implements Visitable {
 
     private final Visitable visitable1;
     private final Visitable visitable2;

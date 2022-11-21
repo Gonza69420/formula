@@ -7,7 +7,7 @@ import edu.austral.ingsis.math.Visitor.Visitor;
 
 import java.util.List;
 
-public class Absolute extends SingleVariableOperation implements Visitable {
+public class Absolute extends SingleVariableOperation {
 
 
     public Absolute(Visitable variable) {

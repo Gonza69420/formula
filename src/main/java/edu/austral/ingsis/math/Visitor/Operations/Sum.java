@@ -6,7 +6,7 @@ import edu.austral.ingsis.math.Visitor.Visitor;
 
 import java.util.List;
 
-public class Sum extends TwoVariableOperation implements Visitable {
+public class Sum extends TwoVariableOperation{
 
 
     public Sum(Visitable visitable1, Visitable visitable2) {

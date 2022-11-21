@@ -4,7 +4,7 @@ import edu.austral.ingsis.math.Visitor.Variable;
 import edu.austral.ingsis.math.Visitor.Visitable;
 import edu.austral.ingsis.math.Visitor.Visitor;
 
-public class SingleVariableOperation {
+public abstract class SingleVariableOperation implements Visitable {
 
     private Visitable variable;
 

@@ -2,7 +2,7 @@ package edu.austral.ingsis.math.Composite.Operations;
 
 import edu.austral.ingsis.math.Composite.Function;
 
-public class Absolute extends SingleVariableOperation implements Function{
+public class Absolute extends SingleVariableOperation{
 
     public Absolute(Function function) {
         super(function);
