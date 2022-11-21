@@ -1,3 +1,9 @@
 package edu.austral.ingsis.math;
 
-public interface Function { }
+import java.util.List;
+
+public interface Function {
+    public double evaluate();
+    public String print();
+    public List<String> listVariables(List<String> list);
+}
