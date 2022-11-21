@@ -1,5 +1,7 @@
-package edu.austral.ingsis.math;
+package edu.austral.ingsis.math.Visitor;
 
+import edu.austral.ingsis.math.Visitor.Operations.*;
+import edu.austral.ingsis.math.Visitor.Visitors.EvaluateVisitor;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -8,12 +10,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ResolutionWithVariablesTest {
 
+    private EvaluateVisitor evaluateVisitor = new EvaluateVisitor();
+
     /**
      * Case 1 + x where x = 3
      */
     @Test
     public void shouldResolveFunction1() {
-        final Double result = 4d;
+        final Double result = evaluateVisitor.visit(new Sum(new Variable(1), new Variable("x", 3)));
 
         assertThat(result, equalTo(4d));
     }
@@ -23,7 +27,7 @@ public class ResolutionWithVariablesTest {
      */
     @Test
     public void shouldResolveFunction2() {
-        final Double result = 3d;
+        final Double result = evaluateVisitor.visit(new Division(new Variable(12), new Variable("div", 4)));
 
         assertThat(result, equalTo(3d));
     }
@@ -33,7 +37,7 @@ public class ResolutionWithVariablesTest {
      */
     @Test
     public void shouldResolveFunction3() {
-        final Double result = 12d;
+        final Double result = evaluateVisitor.visit(new Multiplication(new Division(new Variable(9), new Variable("x", 3)), new Variable("y", 4)));
 
         assertThat(result, equalTo(12d));
     }
@@ -43,7 +47,7 @@ public class ResolutionWithVariablesTest {
      */
     @Test
     public void shouldResolveFunction4() {
-        final Double result = 27d;
+        final Double result = evaluateVisitor.visit(new Power(new Division(new Variable(27), new Variable("a", 9)), new Variable("b", 3)));
 
         assertThat(result, equalTo(27d));
     }
@@ -53,7 +57,7 @@ public class ResolutionWithVariablesTest {
      */
     @Test
     public void shouldResolveFunction5() {
-        final Double result = 6d;
+        final Double result = evaluateVisitor.visit(new Power(new Variable("z", 36), new Division(new Variable(1), new Variable(2))));
 
         assertThat(result, equalTo(6d));
     }
@@ -63,7 +67,7 @@ public class ResolutionWithVariablesTest {
      */
     @Test
     public void shouldResolveFunction6() {
-        final Double result = 0d;
+        final Double result = evaluateVisitor.visit(new Sum(new Absolute(new Variable("value", 8)), new Variable(-8)));
 
         assertThat(result, equalTo(0d));
     }
@@ -73,7 +77,7 @@ public class ResolutionWithVariablesTest {
      */
     @Test
     public void shouldResolveFunction7() {
-        final Double result = 0d;
+        final Double result = evaluateVisitor.visit(new Sum(new Absolute(new Variable("value", -8)), new Variable(-8)));
 
         assertThat(result, equalTo(0d));
     }
@@ -83,7 +87,7 @@ public class ResolutionWithVariablesTest {
      */
     @Test
     public void shouldResolveFunction8() {
-        final Double result = 24d;
+        final Double result = evaluateVisitor.visit(new Multiplication(new Sum(new Variable(5), new Variable("i", -2)), new Variable(8)));
 
         assertThat(result, equalTo(24d));
     }
